@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Sampaikan ke Siti Aisha</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(270deg,#020617,#0f172a,#1e293b,#020617);
+  background-size:600% 600%;
+  animation:bgMove 18s ease infinite;
+  color:#f8fafc;
+  min-height:100vh;
+  overflow:hidden;
+}
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.slide{
+  display:none;
+  min-height:100vh;
+  padding:30px 20px;
+}
+.slide.active{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  animation:fadeSlide .8s ease;
+}
+@keyframes fadeSlide{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.card{
+  background:rgba(0,0,0,.65);
+  max-width:900px;
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 0 40px rgba(0,0,0,.8);
+  animation:cardPop .9s ease;
+}
+@keyframes cardPop{
+  from{opacity:0;transform:scale(.95)}
+  to{opacity:1;transform:scale(1)}
+}
+
+h1{
+  font-size:26px;
+  margin-bottom:15px;
+  animation:textFade 1s ease;
+}
+p{
+  line-height:1.9;
+  font-size:16px;
+  margin:10px 0;
+  animation:textFade 1.2s ease;
+}
+@keyframes textFade{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+audio{
+  width:100%;
+  margin-top:15px;
+}
+
+.controls{
+  position:fixed;
+  bottom:15px;
+  width:100%;
+  text-align:center;
+  z-index:10;
+}
+button{
+  padding:10px 22px;
+  margin:6px;
+  border:none;
+  border-radius:18px;
+  background:#e5e7eb;
+  color:#020617;
+  font-size:15px;
+  cursor:pointer;
+  transition:.3s;
+}
+button:hover{
+  transform:scale(1.05);
+  background:#fff;
+}
+
+.footer{
+  margin-top:20px;
+  font-size:13px;
+  opacity:.6;
+  animation:textFade 1.5s ease;
+}
+
+/* efek bintang */
+.star{
+  position:fixed;
+  top:-10px;
+  color:white;
+  font-size:10px;
+  opacity:.6;
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  to{transform:translateY(110vh)}
+}
+</style>
+</head>
+<body>
+
+<!-- efek bintang -->
+<script>
+for(let i=0;i<30;i++){
+  let s=document.createElement("div");
+  s.className="star";
+  s.innerHTML="✦";
+  s.style.left=Math.random()*100+"vw";
+  s.style.animationDuration=5+Math.random()*5+"s";
+  s.style.fontSize=8+Math.random()*6+"px";
+  document.body.appendChild(s);
+}
+</script>
+
+<!-- SLIDE 1 -->
+<section class="slide active">
+  <div class="card">
+    <h1>Sampaikan ke Siti Aishasipendek</h1>
+    <p>Makasih ya Aisha, udah kenal Diki walaupun kita sekarang masing-masing.</p>
+    <p>Diki nggak pernah mau nyakitin Aisha, apalagi karena masa lalu Aisha.</p>
+    <p>Kalau Aisha mau asing dari Diki, itu nggak apa-apa.</p>
+    <p>Diki nggak bermaksud ngejelekin Aisha atau jadiin Aisha bahan cerita.</p>
+    <p>Diki nggak bakal nyari orang pengganti Aisha. Diki tetap jadi diri sendiri.</p>
+    <p><b>Maaf ya Aisha.</b> Aisha itu baik, sempurna, dan tulus.</p>
+    <div class="footer">— dari Diki</div>
+  </div>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide">
+  <div class="card">
+    <h1>Lagu untuk Aisha 🎧</h1>
+    <p>Diki masih inget playlist aisha</p>
+    <audio controls autoplay loop>
+      <source src="https://files.catbox.moe/tp4rwo.mp4" type="audio/mpeg">
+    </audio>
+  </div>
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide">
+  <div class="card">
+    <h1>🎂 27 September 2011</h1>
+    <p>Diki masih inget tanggal ulang tahun Aisha.</p>
+    <p>Semoga Aisha selalu sehat dan bahagia.</p>
+  </div>
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide">
+  <div class="card">
+    <h1>Kagum </h1>
+    <p>Diki kagum sama Aisha.</p>
+    <p>Kagum sama ketulusan dan cara Aisha jadi diri sendiri.</p>
+  </div>
+</section>
+
+<!-- SLIDE 5 -->
+<section class="slide">
+  <div class="card">
+    <h1>Minder</h1>
+    <p>Diki sering minder karena banyak orang yang suka sama Aisha.</p>
+    <p>Tapi Diki sadar posisi Diki.</p>
+  </div>
+</section>
+
+<!-- SLIDE 6 -->
+<section class="slide">
+  <div class="card">
+    <h1>Maaf ya, Aisha</h1>
+    <p>Maaf kalau Diki banyak kurangnya.</p>
+    <p>Kurang effort, kurang ganteng, kurang peka.</p>
+    <p>Semoga orang baru Aisha bisa bahagiain Aisha.</p>
+    <div class="footer">— Diki</div>
+  </div>
+</section>
+
+<div class="controls">
+  <button onclick="prev()">⬅</button>
+  <button onclick="next()">➡</button>
+</div>
+
+<script>
+let index=0;
+const slides=document.querySelectorAll(".slide");
+function show(i){
+  slides.forEach(s=>s.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+function next(){
+  index=(index+1)%slides.length;
+  show(index);
+}
+function prev(){
+  index=(index-1+slides.length)%slides.length;
+  show(index);
+}
+</script>
+
+</body>
+</html>
